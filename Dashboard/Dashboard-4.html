@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- Da acesso a lib através do cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      /*====  RESET ============================ */
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .graph {
+        background: var(--base-color-graphic);
+        display: inline-block;
+        width: 90%;
+        height: 30.5rem;
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+      .dash {
+        margin: auto;
+        text-align: center;
+      }
+      /*====  VARIABLES ============================ */
+      :root {
+        --header-height: 4.5rem;
+
+        /* colors */
+        --hue: 145;
+        /* HSL color mode */
+        --base-color: hsl(var(--hue) 0% 0%);
+        --base-color-secondary: hsl(var(--hue) 100% 50%);
+        --text-color: hsl(120 150% 40%);
+        --base-color-graphic: hsl(0 0% 90%);
+      }
+      /*====  HEADER ============================ */
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+      .header {
+        background: var(--base-color);
+        height: 3.5rem;
+        border-bottom: 0.3rem solid var(--base-color-secondary);
+        margin-bottom: 0.5rem;
+      }
+
+      .header .container .highlight {
+        color: var(--text-color);
+      }
+
+      .header h1 {
+        float: left;
+        margin-top: 1rem;
+        color: white;
+        font-size: 2rem;
+      }
+      .box {
+        color: #fff;
+        width: 28%;
+        height: 200px;
+        float: left;
+        margin: 25px 2% 2% 3%;
+      }
+
+      .box h1 {
+        font-size: 45px;
+        margin: 40px 10px 0px 10px;
+        border-bottom: solid #00000012 3px;
+        font-weight: lighter;
+      }
+      .box h3 {
+        margin-bottom: 5px;
+        margin-top: 15px;
+      }
+      .yellow {
+        background-color: #e2cb00;
+      }
+
+      .green {
+        background-color: #4caf50;
+      }
+      .red {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <h1><span class="highlight">Projeto</span> Salário</h1>
+      </div>
+    </div>
+
+    <div class="dash">
+      <!-- Farol de temperatura -->
+      <div class="graph">
+        <div class="box red">
+          <h1>00°</h1>
+          <h3>STATUS</h3>
+          <p>Descrição do status</p>
+        </div>
+        <div class="box yellow">
+          <h1>00°</h1>
+          <h3>STATUS</h3>
+          <p>Descrição do status</p>
+        </div>
+        <div class="box green">
+          <h1>00°</h1>
+          <h3>STATUS</h3>
+          <p>Descrição do status</p>
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <div class="graph">
+        <canvas id="myChart" style="width: 100%; height: 100%"></canvas>
+      </div>
+
+      <div class="graph">
+        <canvas id="myChart_2" style="width: 100%; height: 100%"></canvas>
+      </div>
+
+      <div class="graph">
+        <canvas id="myChart_3" style="width: 100%; height: 100%"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const config = {
+    type: 'line',
+    data: {
+      labels: [
+        '2011',
+        '2012',
+        '2013',
+        '2014',
+        '2015',
+        '2016',
+        '2017',
+        '2018',
+        '2019',
+        '2020',
+        '2021'
+      ],
+      datasets: [
+        {
+          label: 'Salário minimo',
+          data: [540, 622, 678, 724, 788, 880, 937, 954, 998, 1045, 1100],
+          backgroundColor: '#000000',
+          borderColor: '#00FF00'
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+
+  const config_2 = {
+    type: 'line',
+    data: {
+      labels: ['Norte', 'Nordeste', 'Sudeste', 'Sul', 'Centro-Oeste'],
+      datasets: [
+        {
+          label: 'Salário médio por região ',
+          data: [1711, 1539, 2585, 2499, 2498],
+          backgroundColor: '#000000',
+          borderColor: '#00FF00'
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+
+  const config_3 = {
+    type: 'line',
+    data: {
+      labels: ['Norte', 'Nordeste', 'Sudeste', 'Sul', 'Centro-Oeste'],
+      datasets: [
+        {
+          label: 'Desemprego por região',
+          data: ['11%', '10.6%', '13.6%', '11.4%', '6.8%', '9.3%'],
+          backgroundColor: '#000000',
+          borderColor: '#00FF00'
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false
+    }
+  };
+
+  var myChartLine = new Chart(document.getElementById('myChart'), config);
+
+  var myChartLine = new Chart(document.getElementById('myChart_2'), config_2);
+
+  var myChartLine = new Chart(document.getElementById('myChart_3'), config_3);
+</script>

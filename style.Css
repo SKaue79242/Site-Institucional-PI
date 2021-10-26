@@ -2,49 +2,5 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.graph {
-  background: var(--base-color-graphic);
-  display: inline-block;
-  width: 90%;
-  height: 30.5rem;
-  margin: 1.5rem;
-  padding: 1.5rem;
-}
-
-/*====  VARIABLES ============================ */
-:root {
-  --header-height: 4.5rem;
-
-  /* colors */
-  --hue: 145;
-  /* HSL color mode */
-  --base-color: hsl(var(--hue) 0% 0%);
-  --base-color-secondary: hsl(var(--hue) 100% 50%);
-  --text-color: hsl(120 150% 40%);
-  --base-color-graphic: hsl(0 0% 90%);
-}
-/*====  HEADER ============================ */
-.container {
-  width: 80%;
-  margin: auto;
-}
-.header {
-  background: var(--base-color);
-  height: 3.5rem;
-  border-bottom: 0.3rem solid var(--base-color-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.header .container .highlight {
-  color: var(--text-color);
-}
-
-.header h1 {
-  float: left;
-  margin-top: 1rem;
-  color: white;
-  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
 }
