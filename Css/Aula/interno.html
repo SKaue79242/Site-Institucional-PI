@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 HTML & CSS</title>
+    
+    <style>
+
+        /* 
+            FORÇA DO CSS
+            DO MAIS FRACO PARA O MAIS FORTE
+
+            TAG -> CLASS -> ID -> INLINE
+        */
+
+        /*
+            Para podemos estilizar o componente pela tag podemos colocar por exemplo:
+            div{}
+
+            Para podemos estilizar o componente pela class podemos colocar por exemplo:
+            .nome-da-classe{}
+
+            Para podemos estilizar o componente pelo id podemos colocar por exemplo:
+            #nome-do-id{}
+        */
+
+
+
+        /* Ao definir um color "red" para todos os textos dentro da minha div, qualquer texto novo que for inserido la dentro, terá a cor vermelha */
+        div {
+            color: red;
+            font-size: 72px
+        }
+
+        /* Ao colocar um color "orange" em uma class que uso em uma "span", o class tem mais força que uma tag, sendo assim, sobrescrevendo */
+        .titulo-legal{
+            color: orange;
+            font-weight: 800; /* usado para "engrossar" um texto (valor padrão de uma fonte é de 500) */
+            background-color: blue;
+        }
+
+        .titulo-legal2{
+            background-color: red;
+        }
+
+        #titulo-legal{
+            color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <!-- 
+            Ao definir uma classe, um id e um style inline, posso usar os 3 para minha estilização e caso eu sobrecreva alguma propriedade
+            como exemplo o color, ele aplicará a regra de força do css. Onde o css inline tem mais força que um id e uma class
+        -->
+        <!-- 
+            Pela regra, o primeiro Titulo legal, terá a cor amarela por estar inline pelo atributo style, sendo mais forte que um id e uma class 
+            (mas tudo que não foi alterado de estilização será incluso até que seja substituído por uma identificação de "força maior")
+         -->
+        <span class="titulo-legal" id="titulo-legal" style="color: yellow;">Titulo legal</span><br>
+        <span class="titulo-legal titulo-legal2" id="titulo-legal">Titulo legal</span><br>
+        <span style="color: blue">Isso é uma span</span><br>
+        <span>Isso é uma span</span><br>
+    </div>
+</body>
+</html>

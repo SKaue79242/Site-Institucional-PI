@@ -1,0 +1,31 @@
+div {
+    background-color: #000000;
+    width: 50%;
+    height: 30%;
+}
+
+#div_2 {
+    background-color: #ff0000;
+    width: 200px;
+    height: 100px;
+}
+
+#p_1 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 17, 255);
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+#div_3 {
+    height: 68%;
+    width: 68%;
+    background-color: #e737a4;
+}
+
+#div_4 {
+    width: 200px;
+    height: 220px;
+    background-color: rgb(251, 255, 0);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            Reset de css - feito para tirar qualquer margin e padding
+            existentes na página
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: yellow;
+            height: 500px;
+            /* 
+                ou podemos declarar margin individualmente em cada canto com
+                margin: 20px 20px 20px 20px;    
+                (regra se aplicativo para o padding)
+            */
+            margin: 20px;
+            /*top right bottom left*/
+            padding: 10px;
+            /*top right bottom left*/
+        }
+
+        .div-filha {
+            background-color: aqua;
+            height: 250px;
+            /*border: 10px solid red; /* solid, dashed e dotted*/
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+            border-top-right-radius: 110px;
+
+            /* 
+                no box-shadow temos os seguintes valores:border:
+
+                offset-x | offset-y | blur-radius | spread-radius | color
+
+                *link para saber mais sobre sombras
+                https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-shadow
+
+            */
+                
+            box-shadow: 4px 4px 3px rgba(195, 195, 195, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div-filha"></div>
+    </div>
+</body>
+
+</html>

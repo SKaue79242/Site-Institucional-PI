@@ -1,0 +1,11 @@
+#id-div{
+    width: 50%;
+    background-color: rgb(207, 205, 205);
+    height: 50px;
+}
+
+#div-id{
+    background-color: rgb(245, 210, 11);
+    height: 50px;
+    width: 80%;
+}
